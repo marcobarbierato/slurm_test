@@ -11,3 +11,6 @@ else:
 device = torch.device(dev) 
 a = torch.zeros(4,3) 
 a = a.to(device)
+
+with open('newfile.txt', 'w+', encoding='UTF-8') as f:
+    f.write(dev)
