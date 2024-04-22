@@ -41,7 +41,7 @@ SHELL=/bin/bash
 
 ### Jobs execution commands
 conda info --envs
-conda activate gpuenv
+conda activate superres
 which python
 python --version
 python condatest.py
