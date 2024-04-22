@@ -3,7 +3,7 @@
 #SBATCH --job-name=CondaTest
 
 ### 
-#SBATCH --mail-user=koriel@math.unipd.it
+#SBATCH --mail-user=@studenti.unipd.it
 
 ### Standard output and standard error for our job
 #SBATCH --error=condatest.err
@@ -22,8 +22,11 @@
 #SBATCH --time=00:10:00
 
 ### GPU request
-#SBATCH --gres=gpu
-####SBATCH --constraint=A6000
+####SBATCH --gres=gpu
+
+### Richiesta della percentuale di GPU
+#SBATCH --constraint=K20
+#SBATCH --gres=mps:30
 
 ### Some useful informative commands
 echo -n 'Date: '
