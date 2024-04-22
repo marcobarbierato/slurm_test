@@ -1,5 +1,6 @@
 #/usr/bin/env python
 
+import os
 import torch
 
 if torch.cuda.is_available():
@@ -12,5 +13,7 @@ device = torch.device(dev)
 a = torch.zeros(4,3) 
 a = a.to(device)
 
-with open('newfile.txt', 'w+', encoding='UTF-8') as f:
-    f.write(dev)
+print(os.getcwd())
+
+#with open('newfile.txt', 'w+', encoding='UTF-8') as f:
+#    f.write(dev)
